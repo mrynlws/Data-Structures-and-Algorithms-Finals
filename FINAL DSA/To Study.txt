@@ -1,0 +1,4 @@
+- begin() function returns an iterator pointing to the first element of the list.
+- push_back() – Adds a new element/node at the end of the list.
+- end()– end() function returns an iterator pointing to the theoretical last element which follows the last element.
+- erase() – Removes a single element or a range of elements from the list.

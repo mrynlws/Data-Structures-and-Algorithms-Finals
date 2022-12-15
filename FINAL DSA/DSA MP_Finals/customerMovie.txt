@@ -1,0 +1,182 @@
+101
+Us
+Horror
+Universal Studios
+4
+us_horror.jpg
+
+102
+Black Box
+Horror
+Amazon Studios
+5
+blackBox_horror.jpg
+
+103
+Happy Death 
+Horror
+Vesuviuos Production
+5
+happyDeathDay_horror.jpg
+
+104
+The Silence
+Horror
+Constantin film
+5
+theSilence_horror.jpg
+
+105
+The Hunt
+Horror
+Blumhouse Production
+5
+theHunt_horror.jpg
+
+106
+Emma
+Romance
+Perfect World Pictures
+5
+emma_romance.jpg
+
+107
+All the Bright Places
+Romance
+Company Demarest Media
+5
+allTheBrightPlaces_romance.jpg
+
+108
+Fifty Shades
+Romance
+Universal Studios
+5
+fiftyShadesofGrey_romance.jpg
+
+109
+Love Actually
+Romance
+Universal Studios
+5
+loveActually_romance.jpg
+
+110
+Four Weddings
+Romance
+Universal Studios
+5
+fourWeddings_romance.jpg
+
+111
+Back to the Future
+Scifi
+Universal Studios
+5
+backToTheFuture_scifi.jpg
+
+112
+Jurassic Park
+Scifi
+Universal Studios
+5
+jurassicPark_scifi.jpg
+
+113
+Battleship
+Scifi
+Universal Studios
+5
+battleship_scifi.jpg
+
+114
+Oblivion
+Scifi
+Universal Studios
+5
+oblivion_scifi.jpg
+
+115
+Waterworld
+Scifi
+Universal Studios
+5
+waterworld_scifi.jpg
+
+116
+Jurassic World
+Action
+Universal Studios
+5
+jurassicWorld_action.jpg
+
+117
+Furious 7
+Action
+Universal Studios
+5
+furious7_action.jpg
+
+118
+Fast and Furious 
+Action
+Universal Studios
+5
+fastAndFurious_action.jpg
+
+119
+Fast Five
+Action
+Universal Studios
+5
+fastFive_action.jpg
+
+120
+Lucy
+Action
+Universal Studios
+5
+lucy_action.jpg
+
+121
+The Lorax
+Comedy
+Universal Studios
+5
+theLorax_comedy.jpg
+
+122
+The Flintstones
+Comedy
+Universal Studios
+5
+theFlintstones_comedy.jpg
+
+123
+Meet the Fockers
+Comedy
+Universal Studios
+5
+meetTheFockers_comedy.jpg
+
+124
+Despicable Me
+Comedy
+Universal Studios
+5
+despicableMe_comedy.jpg
+
+125
+Ted
+Comedy
+Universal Studios
+5
+ted_comedy.jpg
+
+126
+Kyle Joy
+Comedy
+Yannie Productions
+7
+kylejoychickenjoy.jpg
+

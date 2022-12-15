@@ -1,0 +1,278 @@
+#include <windows.h>  
+#include <stdlib.h>
+system("Color B");
+
+Note:
+Line in Data.h
+addNode - line 81, yannie: 73
+deleteNode - line 83, yannie: 78
+returnNode - line 149, yannie: 148
+displayList - line 227, yannie: 224
+	movieSearch - 240, yannie: 237
+	posterSearch - 265, yannie: 262
+showList - line 289, yannie: 285
+checknode - line 309, yannie: 305
+newCustomer - line 338, yannie: 334
+displayCustomer - line 356, yannie: 354
+listRented - line 373, yannie: 371
+rentSearch - line 373, yannie: 386
+movieRent - line 373, yannie: 421
+loadMemory - line 373, yannie: 434
+updateSave - line 373, yannie: 581
+
+==============================
+Main:
+int ch - for main choice [1-8]
+int ch2 - for customer menu choice [1-3]
+char ch3 - for customer menu: if you would like to try again [Y/N]
+
+Inside the do loop:
+Inside if:
+get the size of the movie list then transfer to movieSize
+movieSize + 101 para maging 126 (25 movies and added 101 bc the auto gen id should start at 126 not 125)
+Choice 1: //add movie
+auto generated id (movieSize)
+pass the auto generated code from movieSize to mDetails.code (linked list variable)
+Input:
+movie title
+genre
+prod
+copy
+file name
+movieSize++ to increment the auto generated code
+execute.insertNode() - add the new movie to the linked list 
+
+Choice 2: //delete/rent
+Input:
+cDetails.cid (inside the struct of customerInfo)
+mDetails.code (inside the struct of movieInfo)
+execute.deleteNode (for renting)
+
+Choice 3: //append/return
+Input:
+cDetails.cid (inside the struct of customerInfo)
+mDetails.code (inside the struct of movieInfo)
+execute.returnNode (for returning)
+
+Choice 4: //diplay depends on the movie code 
+Input:
+mDetails.code 
+execute.displayList (for displaying)
+
+Choice 5: //all movies
+execute.printList ()
+
+Choice 6: //check availability
+Input:
+mDetails.code
+execute.checkNode (check if movie is available)
+
+Choice 7:
+Inside do:
+Inside if:
+Choice 1:
+execute.newCustomer (add customer in the linked list)
+Choice 2:
+execute.displayCustomer (display customer details depends on the id)
+Choice 3:
+execute.listRented (list all rented movies, depends on the customer who rented)
+
+Choice 8:
+//update text file
+execute.updateSave(); //customerMovie
+execute.updateSave2(); //customerName
+execute.updateSave3(); //customerRent
+
+Inside the Function mainMenu
+int tempch then return and pass the value to ch 
+Inside the customerMenu
+int tempch then return and pass the value to ch2
+
+Data.h
+//add the default movies and customers to the linked list
+execute.loadMemory();
+execute.loadMemory2();
+execute.loadMemory3();
+
+==========================================================
+struct movieInfo //all info for movie
+struct customerInfo //all info for customer
+struct customerRent //all info for rent
+
+declaration of stl linked list (for all struct)
+declaration for iterators (for all struct)
+Inside for loop:
+int cntMovie = 125 (default) - add movie until 125 then inc itertor so add empty node
+then add the info retrieved inside the empty node
+cntMovie++ - for counter 
+int cntCust = 10 (default) //same with the purpose of cntMovie
+
+class functionlist:
+General Functions - all load and update
+Movie Functions - all movie functions (append, traverse, delete, file handling)
+Customer Functions - all customer functions (append, traverse, delete, file handling)
+
+inside the main:  functionlist execute //objet 
+
+addNode() 
+uses linked list stl
+movieList.push_back(mDetails)
+
+deleteNode()
+bool msearch = false;
+bool csearch = false;
+
+Inside for loop:
+	traverse first to last, then if nagmatch, yung cit--> name mapupunta sa cDetails.name
+	cit --> address mapupunta sa cDetails.address 
+	if mag match set the csearch to true
+	else - if di namatch mapupunta sa else continue ng for
+	then lalabas ng for and mapupunta sa if-else the else then output "ERROR. Please enter valid Customer ID."
+
+if nagmatch yung customer ID, mapupunta rin sa if else then if
+	Inside for loop:
+	Inside if:
+	if nagmatch yung movie ID and may copies pa papasok sita sa if ulit
+	Inside if:
+	Movie successfully rented then output the rented movie information
+	updating number of copies then subtract 1 to show that one copy is rented
+
+	mDetails.title = mit-->title
+	movieRent(pass variables)
+	msearch = true
+	break
+
+	if no copies are available, Error. 
+	If it didn't match, error //edit
+
+returnNode()
+bool rseacrh = false;
+bool msearch = false;
+
+rDetails.rcid = cDetails.cid
+rDetails.rmid = cDetails.mid
+
+Inside for loop: traverse the linked list
+Inside if: if rit--->rcid == rDetails.rcid
+Inside if: if rit-->rmid == rDetails.rmid
+if mathced, erase the rit
+rsearch = true
+else:
+continue - pupunta siya sa labas na else 
+outer else: "Error. No copies available!"
+
+displayList(int movieID)
+Inside if: 
+execute movieSearch(int movieID), output the movie details based on the movie ID
+if movie wasn't found, output error
+else: continue - output outside if above, "Error. The movie is not on the list!" 
+Inside if:
+execute showPoster(int movieID), show poster based on movie ID 
+if poster wasn't found, output error
+else: continue - output outside if above, "Error. File not found!" 
+
+showList()
+traverse the list and display all the movies 
+
+bool functionlist::checknode(int movieID)
+Inside if:
+execute movieSearch 
+if movie wasn't found, output "Error. The movie is not on the list!" 
+
+Inside if:
+if mit-->copy is greater than 0, output movie is available
+else: output movie is not available
+
+Inside if: 
+execute showPoster
+if poster wasn't found, output "Error. File not found!"
+
+newCustomer()
+get the size of the customerList then assign to customerSize
+customerSize++
+cDetails.cid = customerSize
+Input:
+cDetails.name
+cDetails.address
+customerList.push_back(cDetails) //cid, name, address was pushed inside the list
+
+displayCustomer()
+Input:
+cDetails.cid 
+Inside for: traverse customerList
+Inside if: if cit-->cid == cDetails.cid
+output cit-->name and cit-->address
+
+listRented()
+Input:
+cDetails.cid
+Inside if:
+bool functionList::execute rentSearch(int rentID)
+bool rsearch = false
+bool msearch = false;
+For loop: Iterate the rentList
+	Inside If: if rit-->rcid == rentID
+	search = true
+	output the customer name, address, rcid
+
+	For loop: traverse rented list
+	Output:
+	rit --> rmid (movie ID)
+	rit --> rtitle (movie title)
+	break;
+	else: continue - if movie is not rented, output "Error. Customer not found!"
+
+movieRent(pass variables)
+assign:
+rDetails.rcid = customerID
+rDetails.rmid = movieID
+rDetails.rname = customerName
+rDetails.raddress = customerAddress
+rDetails.title = movieTitle
+
+rentList.push_back(rDetails); //add info to rentList 
+
+loadMemory() 
+we used if stream since we want to access the info inside the text file
+and put it inside a linked list.
+
+
+
+updateSave()
+in the update save we used ofstream since we want to output or transfer
+what is inside the linked list into the text file
+we used movieFile as the name of our object, then we open the text file that 
+will hold the customer's information, list of movies, and the customer who rented.
+
+So first is the list of movies. Since we want to output all the movies inside the linked list 
+into the text file, no need to search or anything. We just need to traverse inside the linked list 
+and print everything inside each node. 
+To be able to do that, we used a movieInfo iterator, the movieInfo is the struct 
+that holds the variables in each node. And we named the iterator as mit.
+
+To get inside each node, we used a for loop and the pointer named mit will traverse until the last node.
+Before it gets into the next node, it prints all the information inside each node.
+The lines inside the for loop basically means that the mit pointer will point to a specific node
+and it will print all the information inside each node. To be able to access the specific element inside,
+we used the mit -->mid etc.
+Then we close the file. (why is this important?)
+Same logic with the other two (customerList and rentList)
+In the update save we didn't use append, everything will be printed again and the 
+information before inside the text file will be overwritten
+
+diba sa movieList nag aappend tayo?
+tapos dito sa pagprint nagsstart siya sa pinaka beginning
+ang question ko is bakit hindi nauulit yung pagprint sa
+text file? meaning ba non ung pinaka una lang sa linked list natin is yung
+bagong add na movie? hindi ung default muna?
+
+
+Sa choice 1, hindi na need ilagay sa parameter ung mDetails.mid, mDetails.title, mDetails.genre
+mDetails.production, mDetails.copy, mDetails.filename, nagana na siya napupush niya sa list.
+
+execute.addNode();lang 
+no need to: //pero try pa rin kung gagana pag nilagay sa loob ng parameter :D
+execute.addNode(mDetails.mid, mDetails.title, mDetails.genre
+mDetails.production, mDetails.copy, mDetails.filename)
+
+

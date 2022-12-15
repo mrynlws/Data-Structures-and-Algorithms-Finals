@@ -1,0 +1,25 @@
+MONDAY (April 5):
+- study for CSA Summative
+  AFTER CSA SUMMATIVE:
+  - study physics
+  AT 7:00 PM:
+  - word file, flowchart
+
+TUESDAY (April 6):
+- shoot and edit video
+  AFTER PHYSICS FINALS:
+  - submission of word file, video, flowchart
+
+WEDNESDAY (April 7):
+- study code, prepare for defense
+  AFTER DEFENSE:
+  - inuman
+
+SOURCES:
+- https://stackoverflow.com/questions/22140333/how-to-concatenate-string-and-pass-to-a-system-call
+- https://www.geeksforgeeks.org/list-cpp-stl/
+- http://www.cplusplus.com/reference/fstream/ifstream/is_open/
+- https://www.geeksforgeeks.org/implementing-iterator-pattern-of-a-single-linked-list/
+- https://stackoverflow.com/questions/27640333/how-do-i-use-atoi-function-with-strings-in-c/27640361
+- https://www.geeksforgeeks.org/list-erase-function-in-c-stl/
+- https://stackoverflow.com/questions/7416445/what-is-use-of-c-str-function-in-c/7416581
